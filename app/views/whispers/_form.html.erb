@@ -1,4 +1,13 @@
-<%= form_with(model: @whisper, local: true) do |form| %>
+<%= form_with(model: @whisper, local: true, url: new_or_edit) do |form| %>
+    <% if @whisper.errors.any?%>
+        <div id = "error_explanation">
+            <ul>
+            <% @whisper.errors.full_messages.each do |msg|%>
+                <li><%= msg %></li>
+            <% end %>
+            </ul>
+        </div>
+    <% end %>
     <div class = "whisper_content">
     <%= form.text_field :content%>
     </div>

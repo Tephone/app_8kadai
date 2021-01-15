@@ -8,15 +8,27 @@ class WhispersController < ApplicationController
   end
   def create
     @whisper = Whisper.new(whisper_param)
-    if @whisper.save
-      redirect_to whispers_path
+    if params[:back]
+      render :new
+    else
+      if @whisper.save
+        redirect_to whispers_path
+      else 
+        render :new
+      end
     end
+  end
+  def confirm
+    @whisper = Whisper.new (whisper_param)
+    render :new if @whisper.invalid?
   end
   def edit
   end
   def update
     if @whisper.update(whisper_param)
       redirect_to whispers_path
+    else
+      render :edit
     end
   end
   def destroy

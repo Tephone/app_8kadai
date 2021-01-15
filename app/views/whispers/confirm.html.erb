@@ -1,0 +1,7 @@
+<h3>ok?</h3>
+<%= form_with(model: @whisper, url: whispers_path, local: true) do |form| %>
+    <%=form.hidden_field :content%>
+    <p>text:<%= @whisper.content%></p>
+    <%= form.submit "whisper"%>
+    <%= form.submit "back", name: "back"%>
+<% end %>
