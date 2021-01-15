@@ -10,12 +10,16 @@
   </head>
 
   <body>
-  <header>
-    <img src = '/hed3.jpg'>
-  </header>
-    <%= yield %>
+    <div class = "wrapper">
+      <header>
+        <img src = '/hed3.jpg', class = "img_hed">
+      </header>
+      <div class = "main_body">
+        <%= yield %>
+      </div>
+      <footer>
+        <img src = '/foot.jpg', class = "img_foot">
+      </footer>
+    </div>
   </body>
-  <footer>
-    <img src = '/foot.jpg'>
-  </footer>
 </html>

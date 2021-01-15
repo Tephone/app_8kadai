@@ -12,13 +12,12 @@
                 <p><%= whisper.content %></p>
             </div>
         </div>
-    </div>
-    
-<%=link_to(edit_whisper_path(whisper.id)) do %>
-    <button class="btn btn-secondary btn-lg" >edit</button>
- <%end%>  
- <%=link_to(whisper_path(whisper.id), method: :delete, data: {confirm:'really?'}) do %>
-    <button class="btn btn-secondary btn-lg" >delete</button>
- <%end%>
+    </div>  
+    <%=link_to(edit_whisper_path(whisper.id)) do %>
+        <button class="btn btn-secondary btn-lg" >edit</button>
+    <%end%>  
+    <%=link_to(whisper_path(whisper.id), method: :delete, data: {confirm:'really?'}) do %>
+        <button class="btn btn-secondary btn-lg" >delete</button>
+    <%end%>
 <% end%>
 <%#<%= link_to 'new', new_whisper_path%>
