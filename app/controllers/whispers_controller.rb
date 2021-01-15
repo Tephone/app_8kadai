@@ -1,5 +1,5 @@
 class WhispersController < ApplicationController
-  before_action :set_whisper, only: [:destroy]
+  before_action :set_whisper, only: [:edit, :update, :destroy]
   def index
     @whispers = Whisper.all 
   end
@@ -9,6 +9,13 @@ class WhispersController < ApplicationController
   def create
     @whisper = Whisper.new(whisper_param)
     if @whisper.save
+      redirect_to whispers_path
+    end
+  end
+  def edit
+  end
+  def update
+    if @whisper.update(whisper_param)
       redirect_to whispers_path
     end
   end
