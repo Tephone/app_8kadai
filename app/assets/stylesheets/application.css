@@ -1,0 +1,63 @@
+
+.hiyoko_whisper {
+    width: 100%;
+    margin: 1.5em 0;
+    overflow: hidden;
+  }
+  
+  .hiyoko_whisper .hiyoko_icon {
+    float: left;
+    margin-right: -90px;
+    width: 80px;
+  }
+  
+  .hiyoko_whisper .hiyoko_icon img{
+    width: 100%;
+    height: auto;
+    border: solid 3px #d7ebfe;
+    border-radius: 50%;
+  }
+  
+  .hiyoko_whisper .whispering {
+    width: 100%;
+  }
+  
+  .says {
+    display: inline-block;
+    position: relative; 
+    margin: 5px 0 0 105px;
+    padding: 17px 13px;
+    border-radius: 12px;
+    background: #d7ebfe;
+  }
+  
+  .says:after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 18px; 
+    left: -24px;
+    border: 12px solid transparent;
+    border-right: 12px solid #d7ebfe;
+  }
+  
+  .says p {
+    margin: 0;
+    padding: 0;
+  }
+
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
