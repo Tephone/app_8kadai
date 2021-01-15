@@ -17,7 +17,7 @@
 <%=link_to(new_whisper_path) do %>
     <button class="btn btn-secondary btn-lg" >edit</button>
  <%end%>  
- <%=link_to(new_whisper_path) do %>
+ <%=link_to(whisper_path(whisper.id), method: :delete, data: {confirm:'really?'}) do %>
     <button class="btn btn-secondary btn-lg" >delete</button>
  <%end%>
 <% end%>
